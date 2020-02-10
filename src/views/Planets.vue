@@ -5,7 +5,7 @@
             <span v-on:click="onPlanetClicked(planet)"> {{ planet.name }} {{ index }} </span>
         </div>
         <br/>
-        <PlanetDetails v-on:nameClicked="onNameClicked" v-if="selectedPlanet !== undefined" v-bind:planet="selectedPlanet"></PlanetDetails>
+        <PlanetDetails v-if="selectedPlanet !== undefined" v-bind:planet="selectedPlanet"></PlanetDetails>
     </div>
 </template>
 <script>
@@ -31,9 +31,6 @@ export default {
     methods: {
         onPlanetClicked(planet) {
             this.selectedPlanet = planet;
-        },
-        onNameClicked() {
-            alert("Le nom a été cliqué");
         }
     }
 }
