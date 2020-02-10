@@ -11,6 +11,10 @@
 <script>
 export default {
     name: 'planet-details',
+    /**
+     * La section computed permet de définir une 'nouvelle' variable dans le composant, mais dont la valeur dépend d'une fonction.
+     * @example Computed est notamment utilisé pour filtrer un même tableau et répartir ses données entre plusieurs sous-tableaux.
+     */
     computed: {
         description: function() {
             return `La planète ${this.planet.name} est une planète de type ${this.planet.terrain}. Son climat est de type : ${this.planet.climate}`;
